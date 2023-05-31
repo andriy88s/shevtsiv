@@ -1,4 +1,4 @@
-1. я використав команду git clone https://github.com/vital999/lab_2.git
+1. я використав команду git clone https://github.com/andriy88s/shevtsiv.git
 2. поітм використав команду git log (вивелось 3b6fa8f9a50bf731e4232996e245b67f91dd2401)
 3. створив нову гілку
 4. Перейшов на гілку master та перевірив, що зміни, зроблені в гілці new-branch,
