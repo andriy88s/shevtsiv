@@ -1,10 +1,39 @@
-1. я використав команду git clone https://github.com/vital999/lab_2.git
-2. поітм використав команду git log (вивелось 3b6fa8f9a50bf731e4232996e245b67f91dd2401)
-3. створив нову гілку
-4. Перейшов на гілку master та перевірив, що зміни, зроблені в гілці new-branch,
-не відображаються у файлі README.md. Це тому,
-що зміни були зроблені в іншій гілці, і зараз ми перебуваємо в гілці master.
-Я додав новий запис у файл README.md, пояснивши це:
-зміни не відображаються у файлі README.md на гілці master, оскільки вони були внесені на іншу гілку new_branch.
-git add README.md
-git commit -m"lab_2"
+while True:
+
+    file_path = input("Введіть шлях до файлу: ")
+
+    try:
+
+        with open(file_path, 'r') as file:
+
+            lines = file.readlines()
+
+
+            num_lines = len(lines)
+
+
+            num_empty_lines = len([line for line in lines if line.strip() == ""])
+
+
+            num_lines_with_z = len([line for line in lines if "z" in line])
+
+
+            num_z_chars = sum([line.count("z") for line in lines])
+
+
+            num_and_lines = len([line for line in lines if "and" in line])
+
+            print(f"Кількість рядків: {num_lines}")
+            print(f"Кількість порожніх рядків: {num_empty_lines}")
+            print(f"Кількість рядків з літерою 'z': {num_lines_with_z}")
+            print(f"Кількість літер 'z' у файлі: {num_z_chars}")
+            print(f"Кількість рядків з групою символів 'and': {num_and_lines}")
+
+    except FileNotFoundError:
+        print("Файл не знайдено.")
+
+
+    choice = input("Бажаєте проаналізувати ще один файл? (y/n) ")
+
+    if choice.lower() != "y":
+        break
