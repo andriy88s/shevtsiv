@@ -8,3 +8,10 @@
 зміни не відображаються у файлі README.md на гілці main, оскільки вони були внесені на іншу гілку new_branch.
 git add README.md
 git commit -m"lab_2"
+
+commands:
+
+git clone
+git log
+git new-branch
+git checkout new-branch
